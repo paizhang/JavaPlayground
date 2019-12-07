@@ -57,6 +57,35 @@ public class PrimitiveTypes {
     }
 
     /*
+        float occupy 32 bits.
+        double occupy 64 bits.
+
+        Jave processes double faster than float.
+        1. In the chip level, it is designed to process double. (TODO: Investigate that? )
+        2. Internal math libraries are implemented to operate double by default. (TODO: Verify this.)
+
+        If double type still cannot meet the precision requirement, Java has a BigDecimal class for overcoming this problem.
+     */
+    public void aboutFloatAndDouble() {
+        float floatMin = Float.MIN_VALUE;
+        float floatMax = Float.MAX_VALUE;
+        System.out.println("Float Max number is:" + floatMin);
+        System.out.println("Float Min number is:" + floatMax);
+
+        double doubleMin = Double.MIN_VALUE;
+        double doubleMax = Double.MAX_VALUE;
+        System.out.println("Double Max number is:" + doubleMin);
+        System.out.println("Double Min number is:" + doubleMax);
+
+        float num1 = 5f;  // Constant ending with 'f' indicates a float constant number.
+        double num2 = 10d; // Constant ending with 'd' indicates a double constant number.
+        System.out.println("Float number is:" + num1);
+        System.out.println("Double number is:" + num2);
+
+        float num3 = (float) 5.25;  // By default, all float point number constants are casted into double. So we need to explicitly convert it into float.
+    }
+
+    /*
         When operating two numbers with different primitive types, it by default follows the widening casting conversion.
         byte to short, int, long, float, or double
         short to int, long, float, or double
@@ -65,7 +94,7 @@ public class PrimitiveTypes {
         long to float or double
         float to double
 
-        Narrow casting conversion needs to be explicit. 
+        Narrow casting conversion needs to be explicit.
      */
     public void aboutCasting() {
         short minShort = Short.MIN_VALUE;
@@ -73,5 +102,11 @@ public class PrimitiveTypes {
         short shortNum = (short)(minByte / 2);
         byte byteNum = (byte)(minByte / 2);
 
+        byte num1 = 8;
+        short num2 = 80;
+        int num3 = 800;
+        long sum = 50000 * (num1 + num2 + num3);
+
+        System.out.println("Sum is:" + sum);
     }
 }
