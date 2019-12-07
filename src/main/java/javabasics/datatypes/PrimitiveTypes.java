@@ -32,7 +32,7 @@ public class PrimitiveTypes {
     }
 
     /*
-        short primitive type occupy 16 bits. Range from -32768 to 32767. 
+        short primitive type occupy 16 bits. Range from -32768 to 32767.
      */
     public void aboutShort() {
         short min = Short.MIN_VALUE;
@@ -41,4 +41,19 @@ public class PrimitiveTypes {
         System.out.println("Short Max number is:" + max);
         System.out.println("Short Min number is:" + min);
     }
+
+    /*
+        long primitive type occupy 64 bits. Range from -9223372036854775808 to 9223372036854775807.
+     */
+    public void aboutLong() {
+        long min = Long.MIN_VALUE;
+        long max = Long.MAX_VALUE;
+
+        System.out.println("Long Max number is:" + max);
+        System.out.println("Long Min number is:" + min);
+
+        long num = 100L; // A constant number for long type should end with a upper letter 'L'.
+        System.out.println("My long number is:" + num);
+    }
+    
 }
