@@ -55,5 +55,23 @@ public class PrimitiveTypes {
         long num = 100L; // A constant number for long type should end with a upper letter 'L'.
         System.out.println("My long number is:" + num);
     }
-    
+
+    /*
+        When operating two numbers with different primitive types, it by default follows the widening casting conversion.
+        byte to short, int, long, float, or double
+        short to int, long, float, or double
+        char to int, long, float, or double
+        int to long, float, or double
+        long to float or double
+        float to double
+
+        Narrow casting conversion needs to be explicit. 
+     */
+    public void aboutCasting() {
+        short minShort = Short.MIN_VALUE;
+        byte minByte = Byte.MIN_VALUE;
+        short shortNum = (short)(minByte / 2);
+        byte byteNum = (byte)(minByte / 2);
+
+    }
 }
