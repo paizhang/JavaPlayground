@@ -86,6 +86,18 @@ public class PrimitiveTypes {
     }
 
     /*
+        char primitive type occupies 16 bits. That is because it supports unicode.
+        TODO: You can dive deep to learn more about different unicode types.
+     */
+    public void aboutChar() {
+        char myChar = 'D';
+        char myUnicodeChar = '\u0040';
+
+        System.out.println(myChar);
+        System.out.println(myUnicodeChar);
+    }
+
+    /*
         When operating two numbers with different primitive types, it by default follows the widening casting conversion.
         byte to short, int, long, float, or double
         short to int, long, float, or double
