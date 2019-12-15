@@ -9,6 +9,8 @@ public class Account {
 
     public Account() {
         // Setting default values for name and address in case no values specified in the beginning.
+        // this() can only be used in a constructor for calling other constructors in the same class. And it has to be
+        // the first line in the constructor.
         this("Default name", "Default address");
     }
 
