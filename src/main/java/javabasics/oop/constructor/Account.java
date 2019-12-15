@@ -29,8 +29,15 @@ public class Account {
         return name;
     }
 
+    /*
+        There are two reasons for using Getter and Setter instead of using the variables directly
+        1. For encapsulation purpose.
+        2. We can add some logics to help verify the input values. Also we can organize the output values.
+     */
     public void setName(String name) {
-        this.name = name;
+        if (name.length() < 50) {
+            this.name = name;
+        }
     }
 
     public String getAddress() {
