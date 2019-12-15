@@ -8,6 +8,8 @@ public class Dog extends Animal {
 
     public Dog(String name, int height, int size, int eyes, int legs, int tail) {
         // For inheritance, we have to initialize the father class by calling the father constructor using super keyword.
+        // The reason that we want to call super to initialize the fields in parent class is for code reusability.
+        // We do not need to write duplicate logic.
         super(name, 1, 1, height, size);
         this.eyes = eyes;
         this.legs = legs;
