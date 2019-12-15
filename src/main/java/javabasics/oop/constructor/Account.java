@@ -7,6 +7,10 @@ public class Account {
     private String address;
     private double balance;
 
+    /*
+        There are three constructors here. The third constructor do the actual work to initialize the fields. The other
+        two constructors reuse the third one. This is called constructor chaining.
+     */
     public Account() {
         // Setting default values for name and address in case no values specified in the beginning.
         // this() can only be used in a constructor for calling other constructors in the same class. And it has to be
@@ -15,8 +19,14 @@ public class Account {
     }
 
     public Account(String name, String address) {
+        this("Default ID", name, address., 0.0);
+    }
+
+    public Account(String ID, String name, String address, double balance) {
+        this.ID = ID;
         this.name = name;
         this.address = address;
+        this.balance = balance;
     }
 
     public String getID() {
