@@ -19,7 +19,7 @@ public class Account {
     }
 
     public Account(String name, String address) {
-        this("Default ID", name, address., 0.0);
+        this("Default ID", name, address,0.0);
     }
 
     public Account(String ID, String name, String address, double balance) {
