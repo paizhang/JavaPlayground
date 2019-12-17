@@ -16,6 +16,14 @@ public class Dog extends Animal {
         this.tail = tail;
     }
 
+    /*
+        Override rules:
+        1. We cannot override static methods, only instance methods.
+        2. Override method cannot have lower access modifier than origin method in parent class.
+        3. Constructors and private methods cannot be overriden.
+        4. Final methods cannot be overriden.
+        5. The return type of override method can be any subtype of the original method's return type.
+     */
     @Override
     public void eat() {
         // super can be used to call the method in the parent class. Otherwise, it can end up as a recursive call.
