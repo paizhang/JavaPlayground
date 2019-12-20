@@ -2,14 +2,19 @@ package javabasics.collections.lists;
 
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.ListIterator;
 
 public class Place {
 
-    private LinkedList<String> places;
+    private List<String> places;
 
     public Place() {
         this.places = new LinkedList<>();
+    }
+
+    public Place(List<String> places) {
+        this.places = places;
     }
 
     public void addItem(String item) {
