@@ -1,7 +1,12 @@
 package javabasics.oop.interfaces;
 
 /*
-    Class that implements an interface should override all methods within the interface.
+    Note:
+    1. Class that implements an interface should override all methods within the interface.
+    2. Class can implement multiple interfaces. But class can only inherit from one super class.
+    3. Inheritance demonstrate a IS-A relationship. Interface demonstrate a HAS-A relationship. Classes that implement same interface
+    have same group of properties or skills.
+
     The use cases and purpose for using interfaces.
     1. Code reusability. Interface is a way for demonstrating polymorphism. So it inherits all the advantages that polymorphism
     possesses.
