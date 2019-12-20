@@ -20,6 +20,7 @@ public class MainClass {
     }
 
     public static void main(String[] args) {
+        System.out.println("Operating ArrayList:");
         GroceryList groceryList = new GroceryList();
         groceryList.addItem("First");
         groceryList.printItems();
@@ -29,5 +30,13 @@ public class MainClass {
         groceryList.modifyItem(0, "Modified first");
         groceryList.removeItem(2);
         groceryList.printItems();
+
+        System.out.println("Operating LinkedList:");
+        Place place = new Place();
+        place.addInOrder("A");
+        place.addInOrder("C");
+        place.addInOrder("B");
+        place.addInOrder("e");
+        place.pringItemsUsingIterator();
     }
 }
