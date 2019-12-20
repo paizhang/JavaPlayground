@@ -53,6 +53,7 @@ public class Place {
                     If the new item is smaller than current iterated item, then we need to insert the new item before
                     the current item. Since we already call next() which moved the current iterator behind the current item,
                     we need to move the iterator back front of the current item.
+                    Java implemented LinkedList as a Doubly Linked List which store both forward reference and backward reference.
                  */
                 iterator.previous();
                 iterator.add(item);
