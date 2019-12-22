@@ -6,6 +6,15 @@ public class Account {
     private String name;
     private String address;
     private double balance;
+    private static final String serialID;
+
+    /*
+        static initializers will be invoked before the constructor. If there are multiple initializers, they will be invoked in order.
+     */
+    static {
+        serialID = "12345678";
+        System.out.println("First static initialization block is called.");
+    }
 
     /*
         There are three constructors here. The third constructor do the actual work to initialize the fields. The other
@@ -16,6 +25,11 @@ public class Account {
         // this() can only be used in a constructor for calling other constructors in the same class. And it has to be
         // the first line in the constructor.
         this("Default name", "Default address");
+        System.out.println("Constructor is called.");
+    }
+
+    static {
+        System.out.println("Second static initialization block is called.");
     }
 
     public Account(String name, String address) {
@@ -66,5 +80,9 @@ public class Account {
 
     public void setBalance(double balance) {
         this.balance = balance;
+    }
+
+    public static void main(String[] args) {
+        Account account = new Account();
     }
 }
