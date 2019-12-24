@@ -8,7 +8,7 @@ public class MainClass {
     public static void main(String[] args) {
         FileReaderTest fileReaderTest = new FileReaderTest();
         try {
-            System.out.println(fileReaderTest.readFile(".//src//main//java//javaio//fileio//sample_input_file.txt"));
+            System.out.println(fileReaderTest.readFileByCharacters(".//src//main//java//javaio//fileio//sample_input_file.txt"));
         } catch (FileNotFoundException fe) {
             System.out.println("File is not found." + fe.getMessage());
         } catch (IOException ie) {
