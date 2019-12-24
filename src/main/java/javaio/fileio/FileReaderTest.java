@@ -7,6 +7,7 @@ import java.io.IOException;
 
 public class FileReaderTest {
 
+    // https://codescracker.com/java/java-automatically-close-files.htm
     public String readFile(String filePath) throws FileNotFoundException, IOException {
         // System.out.println(new File(".").getAbsolutePath());  // Find out what the root of the search path
         File file = new File(filePath);
