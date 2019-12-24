@@ -19,7 +19,7 @@ public class MainClass {
     public static void writeFile(String filePath, String content) {
         FileWriterTest fileWriterTest = new FileWriterTest();
         try {
-            fileWriterTest.write(filePath, content);
+            fileWriterTest.writeByCharacters(filePath, content);
         } catch (FileNotFoundException fe) {
             System.out.println("File not found " + fe.getMessage());
         } catch (IOException ie) {

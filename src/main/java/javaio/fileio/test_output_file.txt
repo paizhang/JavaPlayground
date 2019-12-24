@@ -1,2 +1,1 @@
-This is test output message.
-This is the second line. 
+This is te
