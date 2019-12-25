@@ -27,9 +27,22 @@ public class MainClass {
         }
     }
 
+    public static void readFileUsingFileInputStream(String filePath) {
+        FileInputStreamTest fileInputStreamTest = new FileInputStreamTest();
+        try {
+            fileInputStreamTest.readFileByBytes(filePath);
+        } catch (FileNotFoundException fe) {
+            System.out.println("File not found " + fe.getMessage());
+        } catch (IOException ie) {
+            System.out.println("IO exception " + ie.getMessage());
+        }
+    }
+
     public static void main(String[] args) {
         // readFile(".//src//main//java//javaio//fileio//sample_input_file.txt");
-        writeFile(".//src//main//java//javaio//fileio//test_output_file.txt", "This is test output " +
-                "message.\nThis is the second line. ");
+        // writeFile(".//src//main//java//javaio//fileio//test_output_file.txt", "This is test output " +
+                // "message.\nThis is the second line. ");
+
+        readFileUsingFileInputStream(".//src//main//java//javaio//fileio//sample_input_file.txt");
     }
 }
