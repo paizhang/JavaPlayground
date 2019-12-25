@@ -38,11 +38,24 @@ public class MainClass {
         }
     }
 
+    public static void writeFileUsingFileOutputStream(String filePath, String content) {
+        FileOutputStreamTest fileOutputStreamTest = new FileOutputStreamTest();
+        try {
+            fileOutputStreamTest.writeByBytes(filePath, content);
+        } catch (FileNotFoundException fe) {
+            System.out.println("File not found " + fe.getMessage());
+        } catch (IOException ie) {
+            System.out.println("IO exception " + ie.getMessage());
+        }
+    }
+
     public static void main(String[] args) {
         // readFile(".//src//main//java//javaio//fileio//sample_input_file.txt");
         // writeFile(".//src//main//java//javaio//fileio//test_output_file.txt", "This is test output " +
                 // "message.\nThis is the second line. ");
 
-        readFileUsingFileInputStream(".//src//main//java//javaio//fileio//sample_input_file.txt");
+        // readFileUsingFileInputStream(".//src//main//java//javaio//fileio//sample_input_file.txt");
+        writeFileUsingFileOutputStream(".//src//main//java//javaio//fileio//test_output_file.txt", "This" +
+                " is text writen by FileOutputStream. \nThis is the second line. \nThe end.");
     }
 }
