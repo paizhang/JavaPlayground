@@ -80,6 +80,45 @@ public class MainClass {
         }
     }
 
+    public static void readFileUsingBufferedInputStream(String filePath) {
+        BufferedInputStreamTest bufferedInputStreamTest = new BufferedInputStreamTest();
+        try {
+            bufferedInputStreamTest.readBytes(filePath);
+        } catch (FileNotFoundException fe) {
+            System.out.println("File not found exception. ");
+            fe.printStackTrace();
+        } catch (IOException ie) {
+            System.out.println("IOException caught. ");
+            ie.printStackTrace();
+        }
+    }
+
+    public static void markStreamUsingBufferedInputStream(String filePath) {
+        BufferedInputStreamTest bufferedInputStreamTest = new BufferedInputStreamTest();
+        try {
+            bufferedInputStreamTest.markAndReset(filePath);
+        } catch (FileNotFoundException fe) {
+            System.out.println("File not found exception. ");
+            fe.printStackTrace();
+        } catch (IOException ie) {
+            System.out.println("IOException caught. ");
+            ie.printStackTrace();
+        }
+    }
+
+    public static void writeFileUsingBufferedOutputStream(String filePath, String content) {
+        BufferedOutputStreamTest bufferedOutputStreamTest = new BufferedOutputStreamTest();
+        try {
+            bufferedOutputStreamTest.writeBytes(filePath, content);
+        } catch (FileNotFoundException fe) {
+            System.out.println("File not found exception. ");
+            fe.printStackTrace();
+        } catch (IOException ie) {
+            System.out.println("IOException caught. ");
+            ie.printStackTrace();
+        }
+    }
+
     public static void main(String[] args) {
         // readFile(".//src//main//java//javaio//fileio//sample_input_file.txt");
         // writeFile(".//src//main//java//javaio//fileio//test_output_file.txt", "This is test output " +
@@ -91,6 +130,11 @@ public class MainClass {
         // TestObject testObject = new TestObject("Obj2", 3);
         // writeObjectUsingObjectOutputStream(testObject, ".//src//main//java//javaio//fileio//object.bin");
 
-        readObjectUsingObjectInputStream(".//src//main//java//javaio//fileio//object.bin");
+        // readObjectUsingObjectInputStream(".//src//main//java//javaio//fileio//object.bin");
+        // readFileUsingBufferedInputStream(".//src//main//java//javaio//fileio//sample_input_file.txt");
+
+        // markStreamUsingBufferedInputStream(".//src//main//java//javaio//fileio//sample_input_file.txt");
+        writeFileUsingFileOutputStream(".//src//main//java//javaio//fileio//test_output_file.txt", "This" +
+                "is the test text written using BufferedOutputStream.");
     }
 }
