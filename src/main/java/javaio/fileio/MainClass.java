@@ -145,6 +145,32 @@ public class MainClass {
         }
     }
 
+    public static void readDataUsingBufferedReader(String filePath) {
+        BufferedReaderTest bufferedReaderTest = new BufferedReaderTest();
+        try {
+            System.out.println(bufferedReaderTest.readTextByCharacters(filePath));
+        } catch (FileNotFoundException fe) {
+            System.out.println("File not found exception. ");
+            fe.printStackTrace();
+        } catch (IOException ie) {
+            System.out.println("IOException caught. ");
+            ie.printStackTrace();
+        }
+    }
+
+    public static void readDataByLinesUsingBufferedReader(String filePath) {
+        BufferedReaderTest bufferedReaderTest = new BufferedReaderTest();
+        try {
+            bufferedReaderTest.readTextByLines(filePath);
+        } catch (FileNotFoundException fe) {
+            System.out.println("File not found exception. ");
+            fe.printStackTrace();
+        } catch (IOException ie) {
+            System.out.println("IOException caught. ");
+            ie.printStackTrace();
+        }
+    }
+
     public static void main(String[] args) {
         // readFile(".//src//main//java//javaio//fileio//sample_input_file.txt");
         // writeFile(".//src//main//java//javaio//fileio//test_output_file.txt", "This is test output " +
@@ -164,6 +190,8 @@ public class MainClass {
                 "is the test text written using BufferedOutputStream.");  */
         // writeDataUsingDataOutputStream(".//src//main//java//javaio//fileio//test_output_file.txt");
 
-        readDataUsingDataInputStream(".//src//main//java//javaio//fileio//test_output_file.txt");
+        // readDataUsingDataInputStream(".//src//main//java//javaio//fileio//test_output_file.txt");
+        // readDataUsingBufferedReader(".//src//main//java//javaio//fileio//sample_input_file.txt");
+        readDataByLinesUsingBufferedReader(".//src//main//java//javaio//fileio//sample_input_file.txt");
     }
 }
