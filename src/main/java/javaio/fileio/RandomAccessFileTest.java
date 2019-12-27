@@ -9,6 +9,8 @@ RandomAccessFile can be used to access any byte location of the file. The most h
 This is a bidirectional class. It uses a mode parameter to determine the permission for read and write operation.
 TODO: Investigate the use cases for "rws" mode and "rw" mode.
 Note that write operation will override the original data instead of inserting.
+
+Nice article: https://blog.csdn.net/weixin_30653097/article/details/96305767
  */
 public class RandomAccessFileTest {
 
