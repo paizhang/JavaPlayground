@@ -184,6 +184,30 @@ public class MainClass {
         }
     }
 
+    public static void readDataUsingRandomAccessFile(String filePath, String mode) {
+        RandomAccessFileTest randomAccessFileTest = new RandomAccessFileTest();
+        try {
+            randomAccessFileTest.readData(filePath, mode);
+        } catch (FileNotFoundException fe) {
+            System.out.println("File not found exception. ");
+            fe.printStackTrace();
+        } catch (IOException ie) {
+            System.out.println("IOException caught. ");
+        }
+    }
+
+    public static void writeDataUsingRandomAccessFile(String filePath, String mode, int offset, String content) {
+        RandomAccessFileTest randomAccessFileTest = new RandomAccessFileTest();
+        try {
+            randomAccessFileTest.writeData(filePath, mode, offset, content);
+        } catch (FileNotFoundException fe) {
+            System.out.println("File not found exception. ");
+            fe.printStackTrace();
+        } catch (IOException ie) {
+            System.out.println("IOException caught. ");
+        }
+    }
+
     public static void main(String[] args) {
         // readFile(".//src//main//java//javaio//fileio//sample_input_file.txt");
         // writeFile(".//src//main//java//javaio//fileio//test_output_file.txt", "This is test output " +
@@ -206,7 +230,11 @@ public class MainClass {
         // readDataUsingDataInputStream(".//src//main//java//javaio//fileio//test_output_file.txt");
         // readDataUsingBufferedReader(".//src//main//java//javaio//fileio//sample_input_file.txt");
         // readDataByLinesUsingBufferedReader(".//src//main//java//javaio//fileio//sample_input_file.txt");
-        writeDataUsingBufferedWriter(".//src//main//java//javaio//fileio//test_output_file.txt", "This " +
-                "is the text written using BufferedWriter");
+        /* writeDataUsingBufferedWriter(".//src//main//java//javaio//fileio//test_output_file.txt", "This " +
+                "is the text written using BufferedWriter"); */
+        // readDataUsingRandomAccessFile(".//src//main//java//javaio//fileio//sample_input_file.txt", "rw");
+
+        writeDataUsingRandomAccessFile(".//src//main//java//javaio//fileio//sample_input_file.txt", "rw",
+                5, "inserted content");
     }
 }
