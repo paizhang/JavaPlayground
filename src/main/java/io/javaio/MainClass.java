@@ -1,4 +1,4 @@
-package javaio.fileio;
+package io.javaio;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -209,32 +209,32 @@ public class MainClass {
     }
 
     public static void main(String[] args) {
-        // readFile(".//src//main//java//javaio//fileio//sample_input_file.txt");
-        // writeFile(".//src//main//java//javaio//fileio//test_output_file.txt", "This is test output " +
+        // readFile(".//src//main//java//io//javaio//sample_input_file.txt");
+        // writeFile(".//src//main//java//io//javaio//test_output_file.txt", "This is test output " +
                 // "message.\nThis is the second line. ");
 
-        // readFileUsingFileInputStream(".//src//main//java//javaio//fileio//sample_input_file.txt");
-        /* writeFileUsingFileOutputStream(".//src//main//java//javaio//fileio//test_output_file.txt", "This" +
+        // readFileUsingFileInputStream(".//src//main//java//io//javaio//sample_input_file.txt");
+        /* writeFileUsingFileOutputStream(".//src//main//java//io//javaio//test_output_file.txt", "This" +
                 " is text writen by FileOutputStream. \nThis is the second line. \nThe end."); */
         // TestObject testObject = new TestObject("Obj2", 3);
-        // writeObjectUsingObjectOutputStream(testObject, ".//src//main//java//javaio//fileio//object.bin");
+        // writeObjectUsingObjectOutputStream(testObject, ".//src//main//java//io//javaio//object.bin");
 
-        // readObjectUsingObjectInputStream(".//src//main//java//javaio//fileio//object.bin");
-        // readFileUsingBufferedInputStream(".//src//main//java//javaio//fileio//sample_input_file.txt");
+        // readObjectUsingObjectInputStream(".//src//main//java//io//javaio//object.bin");
+        // readFileUsingBufferedInputStream(".//src//main//java//io//javaio//sample_input_file.txt");
 
-        // markStreamUsingBufferedInputStream(".//src//main//java//javaio//fileio//sample_input_file.txt");
-        /* writeFileUsingFileOutputStream(".//src//main//java//javaio//fileio//test_output_file.txt", "This" +
+        // markStreamUsingBufferedInputStream(".//src//main//java//io//javaio//sample_input_file.txt");
+        /* writeFileUsingFileOutputStream(".//src//main//java//io//javaio//test_output_file.txt", "This" +
                 "is the test text written using BufferedOutputStream.");  */
-        // writeDataUsingDataOutputStream(".//src//main//java//javaio//fileio//test_output_file.txt");
+        // writeDataUsingDataOutputStream(".//src//main//java//io//javaio//test_output_file.txt");
 
-        // readDataUsingDataInputStream(".//src//main//java//javaio//fileio//test_output_file.txt");
-        // readDataUsingBufferedReader(".//src//main//java//javaio//fileio//sample_input_file.txt");
-        // readDataByLinesUsingBufferedReader(".//src//main//java//javaio//fileio//sample_input_file.txt");
-        /* writeDataUsingBufferedWriter(".//src//main//java//javaio//fileio//test_output_file.txt", "This " +
+        // readDataUsingDataInputStream(".//src//main//java//io//javaio//test_output_file.txt");
+        // readDataUsingBufferedReader(".//src//main//java//io//javaio//sample_input_file.txt");
+        // readDataByLinesUsingBufferedReader(".//src//main//java//io//javaio//sample_input_file.txt");
+        /* writeDataUsingBufferedWriter(".//src//main//java//io//javaio//test_output_file.txt", "This " +
                 "is the text written using BufferedWriter"); */
-        // readDataUsingRandomAccessFile(".//src//main//java//javaio//fileio//sample_input_file.txt", "rw");
+        // readDataUsingRandomAccessFile(".//src//main//java//io//javaio//sample_input_file.txt", "rw");
 
-        writeDataUsingRandomAccessFile(".//src//main//java//javaio//fileio//sample_input_file.txt", "rw",
+        writeDataUsingRandomAccessFile(".//src//main//java//io//javaio//sample_input_file.txt", "rw",
                 5, "inserted content");
     }
 }

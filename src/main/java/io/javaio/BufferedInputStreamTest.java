@@ -1,4 +1,4 @@
-package javaio.fileio;
+package io.javaio;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;

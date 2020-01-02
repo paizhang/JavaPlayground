@@ -1,3 +1,0 @@
-This is text writen by FileOutputStream. 
-This is the second line. 
-The end.
