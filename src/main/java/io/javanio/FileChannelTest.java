@@ -36,4 +36,20 @@ public class FileChannelTest {
         }
         return sb.toString();
     }
+
+    public void writeDataToFile(String outputFilePath, String content) throws FileNotFoundException, IOException {
+        RandomAccessFile randomAccessFile = new RandomAccessFile(outputFilePath, "rw");
+        // FileChannel fileChannel = randomAccessFile.getChannel();
+        ByteBuffer byteBuffer = ByteBuffer.allocate(content.length());
+        byteBuffer.put(content.getBytes());
+        byteBuffer.flip();
+
+        // Because Channel class(super class of FileChannel) implements Closable, so we can apply try-with-resource here.
+        try (FileChannel fileChannel = randomAccessFile.getChannel()) {
+            while (byteBuffer.hasRemaining()) {
+                fileChannel.write(byteBuffer);
+            }
+        }
+
+    }
 }
