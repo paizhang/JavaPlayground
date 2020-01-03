@@ -3,6 +3,10 @@ package io.javanio;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+/*
+    Nice article explaning how nio implements non-blocking io and what the benefits are.
+    http://tutorials.jenkov.com/java-nio/nio-vs-io.html
+ */
 public class MainClass {
 
     private static final String INPUT_FILE_PATH = ".//src//main//java//io//javanio//nio_test_input.txt";
