@@ -7,6 +7,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
+/*
+    Oracle official Java tutorial resource: https://docs.oracle.com/javase/tutorial/networking/urls/index.html
+ */
 public class URLTest {
 
     public static void parsingURL(URL url) {
