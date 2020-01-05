@@ -14,6 +14,9 @@ import java.net.Socket;
     client and it returns a Socket object for each client connection.
     3. Create input and output stream for client socket.
     4. Read message from the input stream and write message to the output stream.
+
+    TODO: Currently this version can only handle one client at a time. Modify to support handling traffic from multiple
+    client at the same time using multithreading.
  */
 public class SocketServerTest {
 
