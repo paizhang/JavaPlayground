@@ -3,6 +3,7 @@ package network;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Enumeration;
 
@@ -35,6 +36,14 @@ public class NetworkInterfaceTest {
         for (InetAddress inetAddress : Collections.list(inetAddresses)) {
             System.out.printf("InetAddress: %s\n", inetAddress);
         }
+        System.out.printf("Up? %s\n", netint.isUp());
+        System.out.printf("Loopback? %s\n", netint.isLoopback());
+        System.out.printf("PointToPoint? %s\n", netint.isPointToPoint());
+        System.out.printf("Supports multicast? %s\n", netint.supportsMulticast());
+        System.out.printf("Virtual? %s\n", netint.isVirtual());
+        System.out.printf("Hardware address: %s\n",
+                Arrays.toString(netint.getHardwareAddress()));
+        System.out.printf("MTU: %s\n", netint.getMTU());
         System.out.printf("\n");
     }
 
