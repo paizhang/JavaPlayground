@@ -38,8 +38,18 @@ public class MainClass {
         }
     }
 
+    private static void readDataFromSocketChannel(String url, int port) {
+        SocketChannelTest socketChannelTest = new SocketChannelTest();
+        try {
+            socketChannelTest.readDataFromTCPSocket(url, port);
+        } catch (IOException ie) {
+            ie.printStackTrace();
+        }
+    }
+
     public static void main(String[] args) {
-        writeStringFromFile("This is the text written using FileChannel.");
+        // writeStringFromFile("This is the text written using FileChannel.");
+        readDataFromSocketChannel("localhost", 8888);
     }
 
 }
