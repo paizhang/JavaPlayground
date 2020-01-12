@@ -58,11 +58,31 @@ public class MainClass {
         System.out.println(binaryOperator.apply(a, b));
     }
 
+    /*
+        Supplier interface serves as a factory interface.
+        It takes no parameter but returns a new instance.
+     */
+    public static void supplierTest() {
+        Supplier<Person> factory = () -> new Person("Default Name");
+        System.out.println(factory.get().getName());
+    }
+
+    /*
+        Consumer interface represents a function that consumes a value without returning the output.
+        This can be used for printing out the result or write date to a file, or over network.
+     */
+    public static void consumerTest() {
+        Consumer<String> consumer = str -> System.out.println(str);
+        consumer.accept("This is a test string. ");
+    }
+
     public static void main(String[] args) {
         // functionInterfaceTest();
         // predicateInterfaceTest();
         // unaryOperatorTest();
         // binaryOperatorTest(2, 3);
-        biFunctionTest();
+        // biFunctionTest();
+        // supplierTest();
+        consumerTest();
     }
 }
