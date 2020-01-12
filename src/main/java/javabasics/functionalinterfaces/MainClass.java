@@ -2,6 +2,7 @@ package javabasics.functionalinterfaces;
 
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.function.UnaryOperator;
 
 public class MainClass {
 
@@ -27,8 +28,19 @@ public class MainClass {
         System.out.println(pred2.test(3));
     }
 
+    /*
+        UnaryOperator interface extends Function interface. It takes an operand object as the input and usually return
+        the same operand object. This is usually used in functional streaming process.
+     */
+    public static void unaryOperatorTest() {
+        Person p = new Person("Original Name");
+        UnaryOperator<Person> unaryOperator = person -> {person.setName("New Name"); return person;};
+        System.out.println(unaryOperator.apply(p).getName());
+    }
+
     public static void main(String[] args) {
         // functionInterfaceTest();
-        predicateInterfaceTest();
+        // predicateInterfaceTest();
+        unaryOperatorTest();
     }
 }
