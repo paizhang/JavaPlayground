@@ -1,5 +1,6 @@
 package javabasics.functionalinterfaces;
 
+import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
@@ -38,9 +39,21 @@ public class MainClass {
         System.out.println(unaryOperator.apply(p).getName());
     }
 
+    /*
+        BinaryOperator interface extends BiFunction interface. It takes two operands with the same type as input and
+        return an object with the same type.
+
+        It is usually used in functional streaming process.
+     */
+    public static void binaryOperatorTest(Integer a, Integer b) {
+        BinaryOperator<Integer> binaryOperator = (val1, val2) -> val1 + val2;
+        System.out.println(binaryOperator.apply(a, b));
+    }
+
     public static void main(String[] args) {
         // functionInterfaceTest();
         // predicateInterfaceTest();
-        unaryOperatorTest();
+        // unaryOperatorTest();
+        binaryOperatorTest(2, 3);
     }
 }
