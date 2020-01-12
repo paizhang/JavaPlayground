@@ -1,9 +1,6 @@
 package javabasics.functionalinterfaces;
 
-import java.util.function.BinaryOperator;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.UnaryOperator;
+import java.util.function.*;
 
 public class MainClass {
 
@@ -40,6 +37,17 @@ public class MainClass {
     }
 
     /*
+        BiFunction interface takes two arguments as input and produce a result as output.
+        An it has an andThen static method which takes a Function as input and pass the result of BiFunction into it and
+        return the result of the Function apply() method. It can be used for functional streaming processing.
+     */
+    public static void biFunctionTest() {
+        BiFunction<Integer, String, String> biFunction = (num, string) -> num + " " + string;
+        biFunction.andThen(str -> str.length());
+        System.out.println("Length:" + biFunction.apply(666, "means excellence"));
+    }
+
+    /*
         BinaryOperator interface extends BiFunction interface. It takes two operands with the same type as input and
         return an object with the same type.
 
@@ -54,6 +62,7 @@ public class MainClass {
         // functionInterfaceTest();
         // predicateInterfaceTest();
         // unaryOperatorTest();
-        binaryOperatorTest(2, 3);
+        // binaryOperatorTest(2, 3);
+        biFunctionTest();
     }
 }
