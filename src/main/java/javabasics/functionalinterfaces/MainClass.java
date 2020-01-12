@@ -43,8 +43,10 @@ public class MainClass {
      */
     public static void biFunctionTest() {
         BiFunction<Integer, String, String> biFunction = (num, string) -> num + " " + string;
-        biFunction.andThen(str -> str.length());
-        System.out.println("Length:" + biFunction.apply(666, "means excellence"));
+        // andThen() method returns a BiFunction which applies the input Function to the result of original BiFunction.
+        BiFunction<Integer, String, Integer> cascadeBiFunction = biFunction.andThen(str -> str.length());
+        System.out.println(biFunction.apply(666, "means excellence"));
+        System.out.println("Length: " + cascadeBiFunction.apply(666, "means excellence."));
     }
 
     /*
@@ -81,8 +83,8 @@ public class MainClass {
         // predicateInterfaceTest();
         // unaryOperatorTest();
         // binaryOperatorTest(2, 3);
-        // biFunctionTest();
+         biFunctionTest();
         // supplierTest();
-        consumerTest();
+        //consumerTest();
     }
 }
