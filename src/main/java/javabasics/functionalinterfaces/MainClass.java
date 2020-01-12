@@ -44,6 +44,7 @@ public class MainClass {
     public static void biFunctionTest() {
         BiFunction<Integer, String, String> biFunction = (num, string) -> num + " " + string;
         // andThen() method returns a BiFunction which applies the input Function to the result of original BiFunction.
+        // andThen() method is usually used to chain two functions together into a new function.
         BiFunction<Integer, String, Integer> cascadeBiFunction = biFunction.andThen(str -> str.length());
         System.out.println(biFunction.apply(666, "means excellence"));
         System.out.println("Length: " + cascadeBiFunction.apply(666, "means excellence."));
