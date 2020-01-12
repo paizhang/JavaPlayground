@@ -1,6 +1,7 @@
 package javabasics.functionalinterfaces;
 
 import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class MainClass {
 
@@ -18,7 +19,16 @@ public class MainClass {
         System.out.println(func2.apply(5L));
     }
 
+    public static void predicateInterfaceTest() {
+        Predicate<Integer> pred1 = new PredicateInterfaceTest();
+        System.out.println(pred1.test(3));
+
+        Predicate<Integer> pred2 = val -> val > 0;
+        System.out.println(pred2.test(3));
+    }
+
     public static void main(String[] args) {
-        functionInterfaceTest();
+        // functionInterfaceTest();
+        predicateInterfaceTest();
     }
 }
